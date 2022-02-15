@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\MyCppProjects\xpdf-4.03\ZLib\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\adler32.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\compress.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\crc32.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\deflate.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\gzclose.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\gzlib.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\gzread.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\gzwrite.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\infback.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\inffast.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\inflate.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\inftrees.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\trees.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\uncompr.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\$(Configuration)\zutil.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{9FE9E9ED-F7C5-3E7F-B4D1-8179CE53BEA7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

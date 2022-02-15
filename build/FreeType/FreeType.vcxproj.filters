@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\MyCppProjects\xpdf-4.03\FreeType\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftbbox.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftgxval.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftlcdfil.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftmm.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftotval.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftpatent.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftpfr.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftsynth.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\fttype1.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftwinfnt.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftxf86.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\pcf.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\pfr.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\psaux.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\pshinter.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\psmodule.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\raster.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\sfnt.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\truetype.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\type1.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\type42.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\type1cid.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\winfnt.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\autofit.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\bdf.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\cff.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftbase.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftbitmap.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftcache.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftcid.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftdebug.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftfstype.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftgasp.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftglyph.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftgzip.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftinit.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftlzw.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftstroke.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\ftsystem.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\$(Configuration)\smooth.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{9FE9E9ED-F7C5-3E7F-B4D1-8179CE53BEA7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

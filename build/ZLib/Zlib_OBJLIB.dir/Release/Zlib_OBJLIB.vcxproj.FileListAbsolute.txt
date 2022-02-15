@@ -1,0 +1,1 @@
+C:\MyCppProjects\xpdf-4.03\build\ZLib\Zlib_OBJLIB.dir\Release\Zlib_OBJLIB.lib

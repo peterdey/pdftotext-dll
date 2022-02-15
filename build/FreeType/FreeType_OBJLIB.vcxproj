@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{845B27D4-2F62-33E0-A2CC-375447A53847}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>FreeType_OBJLIB</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">FreeType_OBJLIB.dir\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">FreeType_OBJLIB.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">FreeType_OBJLIB</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">FreeType_OBJLIB.dir\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">FreeType_OBJLIB.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">FreeType_OBJLIB</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">FreeType_OBJLIB.dir\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">FreeType_OBJLIB.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">FreeType_OBJLIB</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">FreeType_OBJLIB.dir\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">FreeType_OBJLIB.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">FreeType_OBJLIB</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03\FreeType\include;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config;C:\MyCppProjects\xpdf-4.03\FreeType\include\src;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal\services;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4290;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03\FreeType\include;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config;C:\MyCppProjects\xpdf-4.03\FreeType\include\src;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal\services;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03\FreeType\include;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config;C:\MyCppProjects\xpdf-4.03\FreeType\include\src;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal\services;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03\FreeType\include;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config;C:\MyCppProjects\xpdf-4.03\FreeType\include\src;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal\services;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4290;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03\FreeType\include;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config;C:\MyCppProjects\xpdf-4.03\FreeType\include\src;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal\services;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03\FreeType\include;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config;C:\MyCppProjects\xpdf-4.03\FreeType\include\src;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal\services;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03\FreeType\include;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config;C:\MyCppProjects\xpdf-4.03\FreeType\include\src;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal\services;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4290;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY=1;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03\FreeType\include;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config;C:\MyCppProjects\xpdf-4.03\FreeType\include\src;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal\services;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03\FreeType\include;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config;C:\MyCppProjects\xpdf-4.03\FreeType\include\src;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal\services;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03\FreeType\include;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config;C:\MyCppProjects\xpdf-4.03\FreeType\include\src;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal\services;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4290;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03\FreeType\include;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config;C:\MyCppProjects\xpdf-4.03\FreeType\include\src;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal\services;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03\FreeType\include;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config;C:\MyCppProjects\xpdf-4.03\FreeType\include\src;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal;C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\internal\services;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\MyCppProjects\xpdf-4.03\FreeType\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/MyCppProjects/xpdf-4.03/FreeType/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/MyCppProjects/xpdf-4.03 -BC:/MyCppProjects/xpdf-4.03/build --check-stamp-file C:/MyCppProjects/xpdf-4.03/build/FreeType/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\MyCppProjects\xpdf-4.03\build\FreeType\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/MyCppProjects/xpdf-4.03/FreeType/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/MyCppProjects/xpdf-4.03 -BC:/MyCppProjects/xpdf-4.03/build --check-stamp-file C:/MyCppProjects/xpdf-4.03/build/FreeType/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\MyCppProjects\xpdf-4.03\build\FreeType\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/MyCppProjects/xpdf-4.03/FreeType/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/MyCppProjects/xpdf-4.03 -BC:/MyCppProjects/xpdf-4.03/build --check-stamp-file C:/MyCppProjects/xpdf-4.03/build/FreeType/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\MyCppProjects\xpdf-4.03\build\FreeType\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/MyCppProjects/xpdf-4.03/FreeType/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/MyCppProjects/xpdf-4.03 -BC:/MyCppProjects/xpdf-4.03/build --check-stamp-file C:/MyCppProjects/xpdf-4.03/build/FreeType/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\MyCppProjects\xpdf-4.03\build\FreeType\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftbbox.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftgxval.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftlcdfil.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftmm.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftotval.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftpatent.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftpfr.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftsynth.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\fttype1.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftwinfnt.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftxf86.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\pcf\pcf.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\pfr\pfr.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\psaux\psaux.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\pshinter\pshinter.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\psnames\psmodule.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\raster\raster.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\sfnt\sfnt.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\truetype\truetype.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\type1\type1.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\type42\type42.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\cid\type1cid.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\winfonts\winfnt.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\autofit\autofit.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\bdf\bdf.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\cff\cff.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftbase.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftbitmap.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\cache\ftcache.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftcid.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftdebug.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftfstype.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftgasp.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftglyph.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\gzip\ftgzip.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftinit.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\lzw\ftlzw.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftstroke.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\base\ftsystem.c" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\FreeType\src\smooth\smooth.c" />
+    <ClInclude Include="C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config\ftconfig.h" />
+    <ClInclude Include="C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config\ftheader.h" />
+    <ClInclude Include="C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config\ftmodule.h" />
+    <ClInclude Include="C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config\ftoption.h" />
+    <ClInclude Include="C:\MyCppProjects\xpdf-4.03\FreeType\include\freetype\config\ftstdlib.h" />
+    <ClInclude Include="C:\MyCppProjects\xpdf-4.03\FreeType\include\ft2build.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\MyCppProjects\xpdf-4.03\build\ZERO_CHECK.vcxproj">
+      <Project>{AC1673F9-5C2E-3038-900F-D79BA5F93745}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

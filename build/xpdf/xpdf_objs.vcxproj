@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1130E671-5F99-33E6-8C28-5468CFB9B931}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>xpdf_objs</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xpdf_objs.dir\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xpdf_objs.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xpdf_objs</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xpdf_objs.dir\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xpdf_objs.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xpdf_objs</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">xpdf_objs.dir\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">xpdf_objs.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">xpdf_objs</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">xpdf_objs.dir\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">xpdf_objs.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">xpdf_objs</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4290;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4290;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4290;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4290;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\MyCppProjects\xpdf-4.03\xpdf\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/MyCppProjects/xpdf-4.03/xpdf/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/MyCppProjects/xpdf-4.03 -BC:/MyCppProjects/xpdf-4.03/build --check-stamp-file C:/MyCppProjects/xpdf-4.03/build/xpdf/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\MyCppProjects\xpdf-4.03\build\xpdf\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/MyCppProjects/xpdf-4.03/xpdf/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/MyCppProjects/xpdf-4.03 -BC:/MyCppProjects/xpdf-4.03/build --check-stamp-file C:/MyCppProjects/xpdf-4.03/build/xpdf/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\MyCppProjects\xpdf-4.03\build\xpdf\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/MyCppProjects/xpdf-4.03/xpdf/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/MyCppProjects/xpdf-4.03 -BC:/MyCppProjects/xpdf-4.03/build --check-stamp-file C:/MyCppProjects/xpdf-4.03/build/xpdf/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\MyCppProjects\xpdf-4.03\build\xpdf\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/MyCppProjects/xpdf-4.03/xpdf/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/MyCppProjects/xpdf-4.03 -BC:/MyCppProjects/xpdf-4.03/build --check-stamp-file C:/MyCppProjects/xpdf-4.03/build/xpdf/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\MyCppProjects\xpdf-4.03\build\xpdf\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\AcroForm.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Annot.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Array.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\BuiltinFont.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\BuiltinFontTables.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Catalog.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\CharCodeToUnicode.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\CMap.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Decrypt.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Dict.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Error.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\FontEncodingTables.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Function.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Gfx.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\GfxFont.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\GfxState.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\GlobalParams.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\JArithmeticDecoder.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\JBIG2Stream.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\JPXStream.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Lexer.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Link.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\NameToCharCode.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Object.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\OptionalContent.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Outline.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\OutputDev.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Page.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Parser.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\PDF417Barcode.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\PDFDoc.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\PDFDocEncoding.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\PSTokenizer.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\SecurityHandler.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Stream.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\TextString.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\UnicodeMap.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\UnicodeRemapping.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\UnicodeTypeTable.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\UTF8.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\XFAScanner.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\XRef.cc" />
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Zoox.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\MyCppProjects\xpdf-4.03\build\ZERO_CHECK.vcxproj">
+      <Project>{AC1673F9-5C2E-3038-900F-D79BA5F93745}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

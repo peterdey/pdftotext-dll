@@ -1,0 +1,1 @@
+C:\MyCppProjects\xpdf-4.03\build\xpdf\xpdf_objs.dir\Release\xpdf_objs.lib
