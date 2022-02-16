@@ -314,6 +314,9 @@ Zlib_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 Zlib_SOURCE_DIR:STATIC=C:/MyCppProjects/xpdf-4.03/ZLib
 
+//Dependencies for the target
+pdftotext_LIB_DEPENDS:STATIC=general;goo;general;fofi;general;-pthread;
+
 //Value Computed by CMake
 xpdf_BINARY_DIR:STATIC=C:/MyCppProjects/xpdf-4.03/build
 

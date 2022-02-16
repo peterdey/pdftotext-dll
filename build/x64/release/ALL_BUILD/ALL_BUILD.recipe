@@ -20,7 +20,7 @@
       <FullPath>C:\MyCppProjects\xpdf-4.03\build\xpdf\Release\pdftops.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\MyCppProjects\xpdf-4.03\build\xpdf\Release\pdftotext.exe</FullPath>
+      <FullPath>C:\MyCppProjects\xpdf-4.03\build\xpdf\Release\pdftotext.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\MyCppProjects\xpdf-4.03\build\x64\release\ALL_BUILD</FullPath>

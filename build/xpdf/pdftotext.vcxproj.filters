@@ -4,9 +4,14 @@
     <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\TextOutputDev.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\pdftotext.cc">
+    <ClCompile Include="C:\MyCppProjects\xpdf-4.03\xpdf\Lib.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\MyCppProjects\xpdf-4.03\xpdf\Lib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\MyCppProjects\xpdf-4.03\xpdf\CMakeLists.txt" />
@@ -143,6 +148,9 @@
     </Object>
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{C90319E1-802C-36D6-9842-ABE3F7DDD668}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Object Libraries">
       <UniqueIdentifier>{9FE9E9ED-F7C5-3E7F-B4D1-8179CE53BEA7}</UniqueIdentifier>
     </Filter>

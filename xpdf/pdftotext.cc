@@ -128,7 +128,7 @@ static ArgDesc argDesc[] = {
   {NULL}
 };
 
-int main(int argc, char *argv[]) {
+int main2(int argc, char *argv[]) {
   PDFDoc *doc;
   char *fileName;
   GString *textFileName;

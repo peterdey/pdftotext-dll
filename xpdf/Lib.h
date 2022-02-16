@@ -28,10 +28,9 @@
 #endif
 
 extern "C"
-{
-   
-    EXPORTED int extractText(const char* inFilePath, int startPage, int endPage, int (*callback)(const char*));
-    
-    
+{   
+    EXPORTED int extractText(char* fileName, int firstPage, int lastPage, const char* textOutEnc,const char* layout, void (*textOutputFunc)(void* stream, const char* text, int len), void (*logCallback)(const char*));
+        
 }
+//int extractText(char* fileName, int firstPage, int lastPage, const char* textOutEnc,const char* layout, void (*textOutputFunc)(void* stream, const char* text, int len), void (*logCallback)(const char*));
 

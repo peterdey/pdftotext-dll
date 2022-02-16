@@ -133,10 +133,27 @@ install(FILES ${PROJECT_SOURCE_DIR}/doc/pdftops.1 DESTINATION ${CMAKE_INSTALL_MA
 
 #--- pdftotext
 
-add_executable(pdftotext
+#add_executable(pdftotext
+#  $<TARGET_OBJECTS:xpdf_objs>
+#  TextOutputDev.cc
+#  pdftotext.cc
+#)
+#target_link_libraries(pdftotext goo fofi
+#                      ${PAPER_LIBRARY}
+#                      ${LCMS_LIBRARY}
+#                      ${FONTCONFIG_LIBRARY}
+#                      ${CMAKE_THREAD_LIBS_INIT})
+#install(TARGETS pdftotext RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+#install(FILES ${PROJECT_SOURCE_DIR}/doc/pdftotext.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+
+#--- pdftotext lib
+
+add_library(pdftotext SHARED
   $<TARGET_OBJECTS:xpdf_objs>
   TextOutputDev.cc
-  pdftotext.cc
+  #pdftotext.cc
+  Lib.h
+  Lib.cc
 )
 target_link_libraries(pdftotext goo fofi
                       ${PAPER_LIBRARY}

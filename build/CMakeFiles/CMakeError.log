@@ -1,91 +1,91 @@
 Determining if the function mkstemp exists failed with the following output:
 Change Dir: C:/MyCppProjects/xpdf-4.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_b0d23.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_8c515.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30133 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   CheckFunctionExists.c
-  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=mkstemp /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b0d23.dir\Debug\\" /Fd"cmTC_b0d23.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
-CheckFunctionExists.obj : error LNK2019: símbolo externo não resolvido, mkstemp, referenciado na função main [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_b0d23.vcxproj]
-C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_b0d23.exe : fatal error LNK1120: 1 externo não resolvidos [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_b0d23.vcxproj]
+  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=mkstemp /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8c515.dir\Debug\\" /Fd"cmTC_8c515.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
+CheckFunctionExists.obj : error LNK2019: símbolo externo não resolvido, mkstemp, referenciado na função main [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_8c515.vcxproj]
+C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_8c515.exe : fatal error LNK1120: 1 externo não resolvidos [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_8c515.vcxproj]
 
 
 
 Determining if the function mkstemps exists failed with the following output:
 Change Dir: C:/MyCppProjects/xpdf-4.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_7b8cb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_72949.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30133 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   CheckFunctionExists.c
-  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=mkstemps /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7b8cb.dir\Debug\\" /Fd"cmTC_7b8cb.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
-CheckFunctionExists.obj : error LNK2019: símbolo externo não resolvido, mkstemps, referenciado na função main [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_7b8cb.vcxproj]
-C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_7b8cb.exe : fatal error LNK1120: 1 externo não resolvidos [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_7b8cb.vcxproj]
+  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=mkstemps /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_72949.dir\Debug\\" /Fd"cmTC_72949.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
+CheckFunctionExists.obj : error LNK2019: símbolo externo não resolvido, mkstemps, referenciado na função main [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_72949.vcxproj]
+C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_72949.exe : fatal error LNK1120: 1 externo não resolvidos [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_72949.vcxproj]
 
 
 
 Determining if the function popen exists failed with the following output:
 Change Dir: C:/MyCppProjects/xpdf-4.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_be4b3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_865d2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30133 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   CheckFunctionExists.c
-  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=popen /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_be4b3.dir\Debug\\" /Fd"cmTC_be4b3.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
-CheckFunctionExists.obj : error LNK2019: símbolo externo não resolvido, popen, referenciado na função main [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_be4b3.vcxproj]
-C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_be4b3.exe : fatal error LNK1120: 1 externo não resolvidos [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_be4b3.vcxproj]
+  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=popen /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_865d2.dir\Debug\\" /Fd"cmTC_865d2.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
+CheckFunctionExists.obj : error LNK2019: símbolo externo não resolvido, popen, referenciado na função main [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_865d2.vcxproj]
+C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_865d2.exe : fatal error LNK1120: 1 externo não resolvidos [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_865d2.vcxproj]
 
 
 
 Determining if the function fseeko exists failed with the following output:
 Change Dir: C:/MyCppProjects/xpdf-4.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_d7762.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_209f5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30133 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   CheckFunctionExists.c
-  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d7762.dir\Debug\\" /Fd"cmTC_d7762.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
-CheckFunctionExists.obj : error LNK2019: símbolo externo não resolvido, fseeko, referenciado na função main [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_d7762.vcxproj]
-C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_d7762.exe : fatal error LNK1120: 1 externo não resolvidos [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_d7762.vcxproj]
+  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_209f5.dir\Debug\\" /Fd"cmTC_209f5.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
+CheckFunctionExists.obj : error LNK2019: símbolo externo não resolvido, fseeko, referenciado na função main [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_209f5.vcxproj]
+C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_209f5.exe : fatal error LNK1120: 1 externo não resolvidos [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_209f5.vcxproj]
 
 
 
 Determining if the function fseek64 exists failed with the following output:
 Change Dir: C:/MyCppProjects/xpdf-4.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_7426d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_6b3a0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30133 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   CheckFunctionExists.c
-  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseek64 /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7426d.dir\Debug\\" /Fd"cmTC_7426d.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
-CheckFunctionExists.obj : error LNK2019: símbolo externo não resolvido, fseek64, referenciado na função main [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_7426d.vcxproj]
-C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_7426d.exe : fatal error LNK1120: 1 externo não resolvidos [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_7426d.vcxproj]
+  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseek64 /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6b3a0.dir\Debug\\" /Fd"cmTC_6b3a0.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
+CheckFunctionExists.obj : error LNK2019: símbolo externo não resolvido, fseek64, referenciado na função main [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_6b3a0.vcxproj]
+C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_6b3a0.exe : fatal error LNK1120: 1 externo não resolvidos [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_6b3a0.vcxproj]
 
 
 
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: C:/MyCppProjects/xpdf-4.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_32bfd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_00b10.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30133 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   src.c
-  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_32bfd.dir\Debug\\" /Fd"cmTC_32bfd.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\src.c"
-C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\src.c(15,17): warning C4013: 'pthread_atfork' indefinido; assumindo extern retornando int [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_32bfd.vcxproj]
-src.obj : error LNK2019: símbolo externo não resolvido, pthread_atfork, referenciado na função main [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_32bfd.vcxproj]
-C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_32bfd.exe : fatal error LNK1120: 1 externo não resolvidos [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_32bfd.vcxproj]
+  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_00b10.dir\Debug\\" /Fd"cmTC_00b10.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\src.c"
+C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\src.c(15,17): warning C4013: 'pthread_atfork' indefinido; assumindo extern retornando int [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_00b10.vcxproj]
+src.obj : error LNK2019: símbolo externo não resolvido, pthread_atfork, referenciado na função main [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_00b10.vcxproj]
+C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_00b10.exe : fatal error LNK1120: 1 externo não resolvidos [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_00b10.vcxproj]
 
 
 Source file was:
@@ -112,42 +112,42 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: C:/MyCppProjects/xpdf-4.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_cbbae.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_bc9dc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30133 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   CheckFunctionExists.c
-  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cbbae.dir\Debug\\" /Fd"cmTC_cbbae.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
-LINK : fatal error LNK1104: não é possível abrir o arquivo 'pthreads.lib' [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_cbbae.vcxproj]
+  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bc9dc.dir\Debug\\" /Fd"cmTC_bc9dc.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
+LINK : fatal error LNK1104: não é possível abrir o arquivo 'pthreads.lib' [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_bc9dc.vcxproj]
 
 
 
 Determining if the function pthread_create exists in the pthread failed with the following output:
 Change Dir: C:/MyCppProjects/xpdf-4.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_c7131.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_a3f3e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30133 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   CheckFunctionExists.c
-  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c7131.dir\Debug\\" /Fd"cmTC_c7131.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
-LINK : fatal error LNK1104: não é possível abrir o arquivo 'pthread.lib' [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_c7131.vcxproj]
+  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a3f3e.dir\Debug\\" /Fd"cmTC_a3f3e.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
+LINK : fatal error LNK1104: não é possível abrir o arquivo 'pthread.lib' [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_a3f3e.vcxproj]
 
 
 
 Determining if the include file unistd.h exists failed with the following output:
 Change Dir: C:/MyCppProjects/xpdf-4.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_74ff8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_5bfbc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30133 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   CheckIncludeFile.c
-  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_74ff8.dir\Debug\\" /Fd"cmTC_74ff8.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): fatal error C1083: Não é possível abrir arquivo incluir: 'unistd.h': No such file or directory [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_74ff8.vcxproj]
+  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5bfbc.dir\Debug\\" /Fd"cmTC_5bfbc.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): fatal error C1083: Não é possível abrir arquivo incluir: 'unistd.h': No such file or directory [C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\cmTC_5bfbc.vcxproj]
 
 
 
