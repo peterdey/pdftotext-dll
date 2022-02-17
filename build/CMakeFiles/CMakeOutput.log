@@ -9,7 +9,7 @@ The output was:
 Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
-Compilação de 16/02/2022 17:05:47 iniciada.
+Compilação de 17/02/2022 12:02:06 iniciada.
 Projeto "C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\3.21.3\CompilerIdC\CompilerIdC.vcxproj" no nó 1 (destinos padrão).
 PrepareForBuild:
   Criando o diretório "Debug\".
@@ -58,7 +58,7 @@ The output was:
 Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
-Compilação de 16/02/2022 17:05:49 iniciada.
+Compilação de 17/02/2022 12:02:07 iniciada.
 Projeto "C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\3.21.3\CompilerIdCXX\CompilerIdCXX.vcxproj" no nó 1 (destinos padrão).
 PrepareForBuild:
   Criando o diretório "Debug\".
@@ -88,7 +88,7 @@ Compilação com êxito.
     0 Aviso(s)
     0 Erro(s)
 
-Tempo Decorrido 00:00:01.05
+Tempo Decorrido 00:00:01.08
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -100,42 +100,42 @@ The CXX compiler identification is MSVC, found in "C:/MyCppProjects/xpdf-4.03/bu
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/MyCppProjects/xpdf-4.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_b2f37.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_16086.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30133 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   CMakeCCompilerABI.c
-  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b2f37.dir\Debug\\" /Fd"cmTC_b2f37.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCCompilerABI.c"
-  cmTC_b2f37.vcxproj -> C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_b2f37.exe
+  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_16086.dir\Debug\\" /Fd"cmTC_16086.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCCompilerABI.c"
+  cmTC_16086.vcxproj -> C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_16086.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/MyCppProjects/xpdf-4.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_dcec9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_40e2a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30133 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   CMakeCXXCompilerABI.cpp
-  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_dcec9.dir\Debug\\" /Fd"cmTC_dcec9.dir\Debug\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_dcec9.vcxproj -> C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_dcec9.exe
+  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_40e2a.dir\Debug\\" /Fd"cmTC_40e2a.dir\Debug\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_40e2a.vcxproj -> C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_40e2a.exe
 
 
 
 Performing C++ SOURCE FILE Test HAVE_STD_SORT succeeded with the following output:
 Change Dir: C:/MyCppProjects/xpdf-4.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_21f11.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_46dad.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30133 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   src.cxx
-  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STD_SORT /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_21f11.dir\Debug\\" /Fd"cmTC_21f11.dir\Debug\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\src.cxx"
-  cmTC_21f11.vcxproj -> C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_21f11.exe
+  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STD_SORT /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_46dad.dir\Debug\\" /Fd"cmTC_46dad.dir\Debug\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\src.cxx"
+  cmTC_46dad.vcxproj -> C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_46dad.exe
 
 
 Source file was:
@@ -146,28 +146,28 @@ Source file was:
 Determining if the function _fseeki64 exists passed with the following output:
 Change Dir: C:/MyCppProjects/xpdf-4.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_7566f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_2792e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30133 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   CheckFunctionExists.c
-  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=_fseeki64 /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7566f.dir\Debug\\" /Fd"cmTC_7566f.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
-  cmTC_7566f.vcxproj -> C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_7566f.exe
+  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=_fseeki64 /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2792e.dir\Debug\\" /Fd"cmTC_2792e.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.c"
+  cmTC_2792e.vcxproj -> C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_2792e.exe
 
 
 
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: C:/MyCppProjects/xpdf-4.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_0b85b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_d33be.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.11.0+0538acc04 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30133 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   CheckIncludeFile.c
-  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0b85b.dir\Debug\\" /Fd"cmTC_0b85b.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  cmTC_0b85b.vcxproj -> C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_0b85b.exe
+  cl /c /I"C:\src\vcpkg\installed\\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d33be.dir\Debug\\" /Fd"cmTC_d33be.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  cmTC_d33be.vcxproj -> C:\MyCppProjects\xpdf-4.03\build\CMakeFiles\CMakeTmp\Debug\cmTC_d33be.exe
 
 
 

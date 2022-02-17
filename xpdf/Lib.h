@@ -29,8 +29,9 @@
 
 extern "C"
 {   
-    EXPORTED int extractText(char* fileName, int firstPage, int lastPage, const char* textOutEnc,const char* layout, void (*textOutputFunc)(void* stream, const char* text, int len), void (*logCallback)(const char*));
-        
+    EXPORTED int extractText(char* fileName, int firstPage, int lastPage, const char* textOutEnc, const char* layout, char** textOutput, void (*logCallback)(const char*));
+     
 }
-//int extractText(char* fileName, int firstPage, int lastPage, const char* textOutEnc,const char* layout, void (*textOutputFunc)(void* stream, const char* text, int len), void (*logCallback)(const char*));
+//int extractText(char* fileName, int firstPage, int lastPage, const char* textOutEnc, const char* layout, char** textOutput, void (*logCallback)(const char*));
+
 

@@ -71,14 +71,14 @@ static GBool printHelp = gFalse;
 	printf("textOutputFun \r\n");
 }*/
 
+//void (*textOutputFunc)(void* stream, const char* text, int len)
 
-int extractText(char* fileName, int firstPage, int lastPage, const char* textOutEnc,const char* layout, void (*textOutputFunc)(void* stream, const char* text, int len), void (*logCallback)(const char*)) {
+int extractText(char* fileName, int firstPage, int lastPage, const char* textOutEnc, const char* layout, char** textOutput, void (*logCallback)(const char*)) {
 	PDFDoc* doc;
 	GString* ownerPW, * userPW;
 	TextOutputControl textOutControl;
 	TextOutputDev* textOut;
 	UnicodeMap* uMap;
-
 
 #ifdef DEBUG_FP_LINUX
 	// enable exceptions on floating point div-by-zero
@@ -178,26 +178,29 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 	}
 
 	// write text file
+	if (layout == NULL) {
+		layout = "NULL";
+	}
 	if (strcmp(layout, "table") == 0) {
 		textOutControl.mode = textOutTableLayout;
 		textOutControl.fixedPitch = fixedPitch;
 	}
-	else if ( strcmp(layout, "phys") == 0 ) {
+	else if (strcmp(layout, "phys") == 0) {
 		textOutControl.mode = textOutPhysLayout;
 		textOutControl.fixedPitch = fixedPitch;
 	}
 	else if (strcmp(layout, "simple") == 0) {
 		textOutControl.mode = textOutSimpleLayout;
 	}
-	else if (strcmp(layout, "simple2") == 0 ) {
+	else if (strcmp(layout, "simple2") == 0) {
 		textOutControl.mode = textOutSimple2Layout;
 	}
-	else if (strcmp(layout, "linePrinter") == 0  ) {
+	else if (strcmp(layout, "linePrinter") == 0) {
 		textOutControl.mode = textOutLinePrinter;
 		textOutControl.fixedPitch = fixedPitch;
 		textOutControl.fixedLineSpacing = fixedLineSpacing;
 	}
-	else if (strcmp(layout, "rawOrder") == 0 ) {
+	else if (strcmp(layout, "rawOrder") == 0) {
 		textOutControl.mode = textOutRawOrder;
 	}
 	else {
@@ -214,14 +217,14 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 
 	//textOut = new TextOutputDev(textFileName->getCString(), &textOutControl, gFalse, gTrue);  
 	//stream = open_memstream(&bp, &size);
-	static std::stringstream* stream = new std::stringstream(std::stringstream::out | std::stringstream::in);
-	textOut = new TextOutputDev(textOutputFunc, stream, &textOutControl);
-
-	//std::string str = stream.str();
-	//char* cstr = new char[str.length() + 1];
-	//strcpy(cstr, str.c_str());
-	//printf("Saida: %s", cstr);
-   // std::cout << "Saida:" << stream->str() << std::endl;
+	 std::stringstream* stream = new std::stringstream(std::stringstream::out | std::stringstream::in);
+	//textOut = new TextOutputDev(textOutputFunc, stream, &textOutControl);
+	
+	textOut = new TextOutputDev([](void* str, const char* text, int len) {
+		std::stringstream* stream = (std::stringstream*)str;
+		stream->write(text, len);
+		//printf("%s", text);
+		}, stream, &textOutControl);
 
 	if (textOut->isOk()) {
 		doc->displayPages(textOut, firstPage, lastPage, 72, 72, 0,
@@ -239,6 +242,12 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 	// check for memory leaks
 	Object::memCheck(stderr);
 	gMemReport(stderr);
+	//copy stringstream data to textOutput
+	std::string str = stream->str();
+	char* cstr = new char[str.length() + 1];
+	strcpy(cstr, str.c_str());
+	stream->clear();
+	*textOutput = cstr;	
 
 	return 0;
 }
@@ -248,8 +257,9 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 	printf("inicio \r\n");
 	char* fileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/downloads/a980ff28-9e4b-496d-84a5-ba28f10c7751.pdf";
 	// char* outFileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/out.txt";
-	int re = extractText(fileName, 1, 1, "UTF-8",NULL, [](void* str, const char* text, int len) {
-		printf("%s", text);
-		}, NULL);
-	printf("result %d \r\n", re);
+	char* textOutput = NULL;
+	int re = extractText(fileName, 1, 1, "UTF-8", NULL, &textOutput, NULL);
+	printf("result %s \r\n", textOutput);
+
+	delete[] textOutput;
 }*/
