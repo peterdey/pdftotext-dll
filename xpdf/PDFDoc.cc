@@ -206,7 +206,7 @@ PDFDoc::PDFDoc(char *fileNameA, GString *ownerPassword,
 #endif
 
   if (!file) {
-    error(errIO, -1, "Couldn't open file '{0:t}'", fileName);
+    error(errIO, -1, "Couldn't open file '{0:t}' (PDFDoc)", fileName);
     errCode = errOpenFile;
     return;
   }
@@ -347,8 +347,9 @@ PDFDoc::~PDFDoc() {
   if (str) {
     delete str;
   }
-  if (file) {
+  if (file) {    
     fclose(file);
+    //printf("~PDFDoc file closed\r\n");
   }
   if (fileName) {
     delete fileName;

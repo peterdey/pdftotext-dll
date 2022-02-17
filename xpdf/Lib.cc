@@ -73,7 +73,7 @@ static GBool printHelp = gFalse;
 
 //void (*textOutputFunc)(void* stream, const char* text, int len)
 
-int extractText(char* fileName, int firstPage, int lastPage, const char* textOutEnc, const char* layout, char** textOutput, void (*logCallback)(const char*)) {
+int extractText(char* fileName, int firstPage, int lastPage, const char* textOutEnc, const char* layout, char** textOutput, void (*logCallback)(const char*), const char* ownerPassword, const char* userPassword) {
 	PDFDoc* doc;
 	GString* ownerPW, * userPW;
 	TextOutputControl textOutControl;
@@ -115,22 +115,22 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 
 	// get mapping to output encoding
 	if (!(uMap = globalParams->getTextEncoding())) {
-		error(errConfig, -1, "Couldn't get text encoding");
+		error(errConfig, -1, "Couldn't get text encoding (extractText)");
 		if (logCallback != NULL) {
-			logCallback("Couldn't get text encoding");
+			logCallback("Couldn't get text encoding (extractText)");
 		}
 		delete globalParams;
 		return 99;
 	}
 
 	// open PDF file
-	if (ownerPassword[0] != '\001') {
+	if (ownerPassword != NULL) {
 		ownerPW = new GString(ownerPassword);
 	}
 	else {
 		ownerPW = NULL;
 	}
-	if (userPassword[0] != '\001') {
+	if (userPassword != NULL) {
 		userPW = new GString(userPassword);
 	}
 	else {
@@ -147,7 +147,7 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 
 	if (!doc->isOk()) {
 		if (logCallback != NULL) {
-			logCallback("doc is not Ok");
+			logCallback("doc is not Ok (extractText)");
 		}
 		delete doc;
 		uMap->decRefCnt();
@@ -157,9 +157,9 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 	// check for copy permission
 	if (!doc->okToCopy()) {
 		error(errNotAllowed, -1,
-			"Copying of text from this document is not allowed.");
+			"Copying of text from this document is not allowed (extractText).");
 		if (logCallback != NULL) {
-			logCallback("Copying of text from this document is not allowed.");
+			logCallback("Copying of text from this document is not allowed (extractText).");
 		}
 		delete doc;
 		uMap->decRefCnt();
@@ -232,7 +232,7 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 	}
 	else {
 		if (logCallback != NULL) {
-			logCallback("text Out is not Ok");
+			logCallback("text Out is not Ok (extractText)");
 		}
 		delete textOut;
 		return 2;
@@ -246,20 +246,121 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 	std::string str = stream->str();
 	char* cstr = new char[str.length() + 1];
 	strcpy(cstr, str.c_str());
+	//free
 	stream->clear();
+	delete doc;
+
 	*textOutput = cstr;	
 
 	return 0;
 }
 
+int getNumPages(char* fileName, void (*logCallback)(const char*), const char* ownerPassword, const char* userPassword) {
+	PDFDoc* doc;
+	GString* ownerPW, * userPW;
+	
+	UnicodeMap* uMap;
 
-/*int main(int argc, char* argv[]) {
+#ifdef DEBUG_FP_LINUX
+	// enable exceptions on floating point div-by-zero
+	feenableexcept(FE_DIVBYZERO);
+	// force 64-bit rounding: this avoids changes in output when minor
+	// code changes result in spills of x87 registers; it also avoids
+	// differences in output with valgrind's 64-bit floating point
+	// emulation (yes, this is a kludge; but it's pretty much
+	// unavoidable given the x87 instruction set; see gcc bug 323 for
+	// more info)
+	fpu_control_t cw;
+	_FPU_GETCW(cw);
+	cw = (fpu_control_t)((cw & ~_FPU_EXTENDED) | _FPU_DOUBLE);
+	_FPU_SETCW(cw);
+#endif
+
+	// read config file
+	globalParams = new GlobalParams(cfgFileName);	
+	globalParams->setTextEncoding(textEncName);
+	//globalParams->setTextEOL(textEOL))  
+	if (noPageBreaks) {
+		globalParams->setTextPageBreaks(gFalse);
+	}
+	if (quiet) {
+		globalParams->setErrQuiet(quiet);
+	}
+
+	// get mapping to output encoding
+	if (!(uMap = globalParams->getTextEncoding())) {
+		error(errConfig, -1, "Couldn't get text encoding (getNumPages)");
+		if (logCallback != NULL) {
+			logCallback("Couldn't get text encoding (getNumPages)");
+		}
+		delete globalParams;
+		return 99;
+	}
+
+	// open PDF file
+	if (ownerPassword != NULL) {
+		ownerPW = new GString(ownerPassword);
+	}
+	else {
+		ownerPW = NULL;
+	}
+	if (userPassword != NULL) {
+		userPW = new GString(userPassword);
+	}
+	else {
+		userPW = NULL;
+	}
+
+	doc = new PDFDoc(fileName, ownerPW, userPW);
+	if (userPW) {
+		delete userPW;
+	}
+	if (ownerPW) {
+		delete ownerPW;
+	}
+
+	if (!doc->isOk()) {
+		if (logCallback != NULL) {
+			logCallback("doc is not Ok (getNumPages)");
+		}
+		delete doc;
+		uMap->decRefCnt();
+		return -1;
+	}
+
+	// check for copy permission
+	if (!doc->okToCopy()) {
+		error(errNotAllowed, -1,
+			"Copying of text from this document is not allowed (getNumPages).");
+		if (logCallback != NULL) {
+			logCallback("Copying of text from this document is not allowed (getNumPages).");
+		}
+		delete doc;
+		uMap->decRefCnt();
+		return -1;
+	}
+		
+	// get page range
+	int pages= doc->getNumPages();	
+	//free
+	delete doc;
+
+	return pages;
+}
+
+
+int main(int argc, char* argv[]) {
 	printf("inicio \r\n");
-	char* fileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/downloads/a980ff28-9e4b-496d-84a5-ba28f10c7751.pdf";
+	char* fileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/downloads/3883f913-9d81-49f4-ae16-da448091c18c.pdf";
 	// char* outFileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/out.txt";
 	char* textOutput = NULL;
-	int re = extractText(fileName, 1, 1, "UTF-8", NULL, &textOutput, NULL);
+	int re = extractText(fileName, 1, 1, "UTF-8", NULL, &textOutput, NULL,NULL,NULL);
 	printf("result %s \r\n", textOutput);
 
+	int numPages = getNumPages(fileName, [](const char* v) {
+		printf("log: %s \r\n", v);
+		}, NULL, NULL);
+	printf("getNumPages %d \r\n", numPages);
+
 	delete[] textOutput;
-}*/
+}

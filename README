@@ -1,3 +1,19 @@
+#### fork with modifications to compile pdftotext as a dynamic library compatible with windows and linux
+
+```console
+git clone https://github.com/insinfo/xpdf.git
+cd xpdf
+mkdir build
+cd build 
+cmake ..
+cd ..
+cmake --build build --config release
+```
+#### Requirements:
+
+Visual Studio 2019
+cmake version 3.21.3
+
 Xpdf
 ====
 
@@ -190,7 +206,7 @@ Various people have contributed modifications made for use by the
 pdftex project:
 
 * Han The Thanh
-* Martin Schröder of ArtCom GmbH
+* Martin Schrï¿½der of ArtCom GmbH
 
 
 References
