@@ -1,0 +1,96 @@
+Determining if the function fseek64 exists failed with the following output:
+Change Dir: /home/insinfo/Documents/xpdf/linux/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d804c/fast && /usr/bin/make -f CMakeFiles/cmTC_d804c.dir/build.make CMakeFiles/cmTC_d804c.dir/build
+make[1]: Entrando no diretório '/home/insinfo/Documents/xpdf/linux/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d804c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=fseek64   -o CMakeFiles/cmTC_d804c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d804c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d804c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=fseek64    -rdynamic CMakeFiles/cmTC_d804c.dir/CheckFunctionExists.c.o  -o cmTC_d804c 
+/usr/bin/ld: CMakeFiles/cmTC_d804c.dir/CheckFunctionExists.c.o: na função "main":
+CheckFunctionExists.c:(.text+0x14): referência não definida para "fseek64"
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_d804c.dir/build.make:87: cmTC_d804c] Erro 1
+make[1]: Saindo do diretório '/home/insinfo/Documents/xpdf/linux/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_d804c/fast] Erro 2
+
+
+
+Determining if the function _fseeki64 exists failed with the following output:
+Change Dir: /home/insinfo/Documents/xpdf/linux/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_58cc2/fast && /usr/bin/make -f CMakeFiles/cmTC_58cc2.dir/build.make CMakeFiles/cmTC_58cc2.dir/build
+make[1]: Entrando no diretório '/home/insinfo/Documents/xpdf/linux/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_58cc2.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_fseeki64   -o CMakeFiles/cmTC_58cc2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_58cc2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58cc2.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=_fseeki64    -rdynamic CMakeFiles/cmTC_58cc2.dir/CheckFunctionExists.c.o  -o cmTC_58cc2 
+/usr/bin/ld: CMakeFiles/cmTC_58cc2.dir/CheckFunctionExists.c.o: na função "main":
+CheckFunctionExists.c:(.text+0x14): referência não definida para "_fseeki64"
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_58cc2.dir/build.make:87: cmTC_58cc2] Erro 1
+make[1]: Saindo do diretório '/home/insinfo/Documents/xpdf/linux/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_58cc2/fast] Erro 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/insinfo/Documents/xpdf/linux/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cb09e/fast && /usr/bin/make -f CMakeFiles/cmTC_cb09e.dir/build.make CMakeFiles/cmTC_cb09e.dir/build
+make[1]: Entrando no diretório '/home/insinfo/Documents/xpdf/linux/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cb09e.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_cb09e.dir/src.c.o   -c /home/insinfo/Documents/xpdf/linux/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_cb09e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb09e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_cb09e.dir/src.c.o  -o cmTC_cb09e 
+/usr/bin/ld: CMakeFiles/cmTC_cb09e.dir/src.c.o: na função "main":
+src.c:(.text+0x46): referência não definida para "pthread_create"
+/usr/bin/ld: src.c:(.text+0x52): referência não definida para "pthread_detach"
+/usr/bin/ld: src.c:(.text+0x63): referência não definida para "pthread_join"
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_cb09e.dir/build.make:87: cmTC_cb09e] Erro 1
+make[1]: Saindo do diretório '/home/insinfo/Documents/xpdf/linux/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_cb09e/fast] Erro 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/insinfo/Documents/xpdf/linux/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_19c16/fast && /usr/bin/make -f CMakeFiles/cmTC_19c16.dir/build.make CMakeFiles/cmTC_19c16.dir/build
+make[1]: Entrando no diretório '/home/insinfo/Documents/xpdf/linux/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_19c16.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_19c16.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_19c16
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19c16.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_19c16.dir/CheckFunctionExists.c.o  -o cmTC_19c16  -lpthreads 
+/usr/bin/ld: não foi possível localizar -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_19c16.dir/build.make:87: cmTC_19c16] Erro 1
+make[1]: Saindo do diretório '/home/insinfo/Documents/xpdf/linux/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_19c16/fast] Erro 2
+
+
+
