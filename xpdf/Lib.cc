@@ -349,7 +349,7 @@ int getNumPages(char* fileName, void (*logCallback)(const char*), const char* ow
 }
 
 
-int main(int argc, char* argv[]) {
+/*int main(int argc, char* argv[]) {
 	printf("inicio \r\n");
 	char* fileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/downloads/3883f913-9d81-49f4-ae16-da448091c18c.pdf";
 	// char* outFileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/out.txt";
@@ -363,4 +363,4 @@ int main(int argc, char* argv[]) {
 	printf("getNumPages %d \r\n", numPages);
 
 	delete[] textOutput;
-}
+}*/

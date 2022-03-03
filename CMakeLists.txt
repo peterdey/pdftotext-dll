@@ -24,6 +24,12 @@ set(FREETYPE_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/FreeType/include")
 
 include(cmake-config.txt)
 
+#isaque alterou aqui
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC -fvisibility=hidden")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -fvisibility=hidden")
+#export CFLAGS="-fPIC -fvisibility=hidden" export CXXFLAGS="-fPIC -fvisibility=hidden"
+message(WARNING "CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS}")   
+
 add_subdirectory(goo)
 add_subdirectory(fofi)
 add_subdirectory(splash)
