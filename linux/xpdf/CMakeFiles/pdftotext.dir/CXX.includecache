@@ -215,6 +215,10 @@ Error.h
 /home/insinfo/Documents/xpdf/xpdf/Error.h
 config.h
 /home/insinfo/Documents/xpdf/xpdf/config.h
+thread
+-
+chrono
+-
 
 /home/insinfo/Documents/xpdf/xpdf/Lib.h
 

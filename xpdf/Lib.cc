@@ -335,6 +335,7 @@ int getNumPages(char* fileName, void (*logCallback)(const char*), const char* ow
 	// get page range
 	int pages= doc->getNumPages();	
 	//free
+	delete globalParams;	
 	delete doc;
 
 	return pages;
@@ -347,22 +348,18 @@ void freeTextOutput(char* textOutput) {
 
 
 //check for memory leaks
-void testLoop() {
-	//for (int i = 0; i < 8; i++) {
-
-		char* fileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/downloads/3883f913-9d81-49f4-ae16-da448091c18c.pdf";
-		// char* outFileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/out.txt";
-		char* textOutput = NULL;
-		int re = extractText(fileName, 1, 1, "UTF-8", NULL, &textOutput, NULL, NULL, NULL);
-		printf("result %s \r\n", textOutput);
-		//delete[] textOutput;
-		freeTextOutput(textOutput);
-	//}
-	/*int numPages = getNumPages(fileName, [](const char* v) {
-		printf("log: %s \r\n", v);
-		}, NULL, NULL);
-
-	printf("getNumPages %d \r\n", numPages);*/
+/*void testLoop() {
+	char* fileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/downloads/3883f913-9d81-49f4-ae16-da448091c18c.pdf";
+	// char* outFileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/out.txt";
+	char* textOutput = NULL;
+	int re = extractText(fileName, 1, 1, "UTF-8", NULL, &textOutput, NULL, NULL, NULL);
+	printf("result %s \r\n", textOutput);
+	//delete[] textOutput;
+	freeTextOutput(textOutput);	
+	//int numPages = getNumPages(fileName, [](const char* v) {
+	//	printf("log: %s \r\n", v);
+	//	}, NULL, NULL);
+	//printf("getNumPages %d \r\n", numPages);
 
 	std::this_thread::sleep_for(2000ms);
 	testLoop();
@@ -371,4 +368,4 @@ void testLoop() {
 int main(int argc, char* argv[]) {
 	printf("inicio \r\n");
 	testLoop();
-}
+}*/
