@@ -1,0 +1,1 @@
+C:\MyCppProjects\xpdf-4.03\build\goo\goo_objs.dir\Debug\goo_objs.lib

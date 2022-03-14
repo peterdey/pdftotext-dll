@@ -32,6 +32,11 @@
 #include "Error.h"
 #include "config.h"
 
+//for test only
+#include <thread>
+#include <chrono>
+using namespace std::chrono_literals;
+
 /*static int firstPage = 1;
 static int lastPage = 0;*/
 static GBool physLayout = gFalse;
@@ -76,24 +81,10 @@ static GBool printHelp = gFalse;
 int extractText(char* fileName, int firstPage, int lastPage, const char* textOutEnc, const char* layout, char** textOutput, void (*logCallback)(const char*), const char* ownerPassword, const char* userPassword) {
 	PDFDoc* doc;
 	GString* ownerPW, * userPW;
-	TextOutputControl textOutControl;
+	TextOutputControl *textOutControl;
 	TextOutputDev* textOut;
 	UnicodeMap* uMap;
 
-#ifdef DEBUG_FP_LINUX
-	// enable exceptions on floating point div-by-zero
-	feenableexcept(FE_DIVBYZERO);
-	// force 64-bit rounding: this avoids changes in output when minor
-	// code changes result in spills of x87 registers; it also avoids
-	// differences in output with valgrind's 64-bit floating point
-	// emulation (yes, this is a kludge; but it's pretty much
-	// unavoidable given the x87 instruction set; see gcc bug 323 for
-	// more info)
-	fpu_control_t cw;
-	_FPU_GETCW(cw);
-	cw = (fpu_control_t)((cw & ~_FPU_EXTENDED) | _FPU_DOUBLE);
-	_FPU_SETCW(cw);
-#endif
 
 	// read config file
 	globalParams = new GlobalParams(cfgFileName);
@@ -181,50 +172,51 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 	if (layout == NULL) {
 		layout = "NULL";
 	}
+	textOutControl = new TextOutputControl();
+
 	if (strcmp(layout, "table") == 0) {
-		textOutControl.mode = textOutTableLayout;
-		textOutControl.fixedPitch = fixedPitch;
+		textOutControl->mode = textOutTableLayout;
+		textOutControl->fixedPitch = fixedPitch;
 	}
 	else if (strcmp(layout, "phys") == 0) {
-		textOutControl.mode = textOutPhysLayout;
-		textOutControl.fixedPitch = fixedPitch;
+		textOutControl->mode = textOutPhysLayout;
+		textOutControl->fixedPitch = fixedPitch;
 	}
 	else if (strcmp(layout, "simple") == 0) {
-		textOutControl.mode = textOutSimpleLayout;
+		textOutControl->mode = textOutSimpleLayout;
 	}
 	else if (strcmp(layout, "simple2") == 0) {
-		textOutControl.mode = textOutSimple2Layout;
+		textOutControl->mode = textOutSimple2Layout;
 	}
 	else if (strcmp(layout, "linePrinter") == 0) {
-		textOutControl.mode = textOutLinePrinter;
-		textOutControl.fixedPitch = fixedPitch;
-		textOutControl.fixedLineSpacing = fixedLineSpacing;
+		textOutControl->mode = textOutLinePrinter;
+		textOutControl->fixedPitch = fixedPitch;
+		textOutControl->fixedLineSpacing = fixedLineSpacing;
 	}
 	else if (strcmp(layout, "rawOrder") == 0) {
-		textOutControl.mode = textOutRawOrder;
+		textOutControl->mode = textOutRawOrder;
 	}
 	else {
-		textOutControl.mode = textOutReadingOrder;
+		textOutControl->mode = textOutReadingOrder;
 	}
 
-	textOutControl.clipText = clipText;
-	textOutControl.discardDiagonalText = discardDiag;
-	textOutControl.insertBOM = insertBOM;
-	textOutControl.marginLeft = marginLeft;
-	textOutControl.marginRight = marginRight;
-	textOutControl.marginTop = marginTop;
-	textOutControl.marginBottom = marginBottom;
+	textOutControl->clipText = clipText;
+	textOutControl->discardDiagonalText = discardDiag;
+	textOutControl->insertBOM = insertBOM;
+	textOutControl->marginLeft = marginLeft;
+	textOutControl->marginRight = marginRight;
+	textOutControl->marginTop = marginTop;
+	textOutControl->marginBottom = marginBottom;
 
 	//textOut = new TextOutputDev(textFileName->getCString(), &textOutControl, gFalse, gTrue);  
 	//stream = open_memstream(&bp, &size);
-	 std::stringstream* stream = new std::stringstream(std::stringstream::out | std::stringstream::in);
-	//textOut = new TextOutputDev(textOutputFunc, stream, &textOutControl);
+	std::stringstream* stream = new std::stringstream(std::stringstream::out | std::stringstream::in);	
 	
 	textOut = new TextOutputDev([](void* str, const char* text, int len) {
 		std::stringstream* stream = (std::stringstream*)str;
 		stream->write(text, len);
 		//printf("%s", text);
-		}, stream, &textOutControl);
+		}, stream, textOutControl);
 
 	if (textOut->isOk()) {
 		doc->displayPages(textOut, firstPage, lastPage, 72, 72, 0,
@@ -237,18 +229,18 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 		delete textOut;
 		return 2;
 	}
+	//free
+	delete globalParams;	
 	delete textOut;
-
-	// check for memory leaks
-	Object::memCheck(stderr);
-	gMemReport(stderr);
+	delete textOutControl;
+	delete doc;
+		
 	//copy stringstream data to textOutput
 	std::string str = stream->str();
 	char* cstr = new char[str.length() + 1];
 	strcpy(cstr, str.c_str());
-	//free
-	stream->clear();
-	delete doc;
+	delete stream;	
+	str = "";	
 
 	*textOutput = cstr;	
 
@@ -349,18 +341,34 @@ int getNumPages(char* fileName, void (*logCallback)(const char*), const char* ow
 }
 
 
-/*int main(int argc, char* argv[]) {
-	printf("inicio \r\n");
-	char* fileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/downloads/3883f913-9d81-49f4-ae16-da448091c18c.pdf";
-	// char* outFileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/out.txt";
-	char* textOutput = NULL;
-	int re = extractText(fileName, 1, 1, "UTF-8", NULL, &textOutput, NULL,NULL,NULL);
-	printf("result %s \r\n", textOutput);
+void freeTextOutput(char* textOutput) {
+	delete[] textOutput;
+}
 
-	int numPages = getNumPages(fileName, [](const char* v) {
+
+//check for memory leaks
+void testLoop() {
+	//for (int i = 0; i < 8; i++) {
+
+		char* fileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/downloads/3883f913-9d81-49f4-ae16-da448091c18c.pdf";
+		// char* outFileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/out.txt";
+		char* textOutput = NULL;
+		int re = extractText(fileName, 1, 1, "UTF-8", NULL, &textOutput, NULL, NULL, NULL);
+		printf("result %s \r\n", textOutput);
+		//delete[] textOutput;
+		freeTextOutput(textOutput);
+	//}
+	/*int numPages = getNumPages(fileName, [](const char* v) {
 		printf("log: %s \r\n", v);
 		}, NULL, NULL);
-	printf("getNumPages %d \r\n", numPages);
 
-	delete[] textOutput;
-}*/
+	printf("getNumPages %d \r\n", numPages);*/
+
+	std::this_thread::sleep_for(2000ms);
+	testLoop();
+}
+
+int main(int argc, char* argv[]) {
+	printf("inicio \r\n");
+	testLoop();
+}

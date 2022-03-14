@@ -1,0 +1,14 @@
+﻿  Building Custom Rule C:/MyCppProjects/xpdf-4.03/xpdf/CMakeLists.txt
+  TextOutputDev.cc
+  Lib.cc
+C:\MyCppProjects\xpdf-4.03\xpdf\Lib.cc(81,212): warning C4273: 'extractText': vínculo de dll inconsistente
+C:\MyCppProjects\xpdf-4.03\xpdf\Lib.h(32,18): message : consulte a definição anterior de 'extractText'
+C:\MyCppProjects\xpdf-4.03\xpdf\Lib.cc(250,120): warning C4273: 'getNumPages': vínculo de dll inconsistente
+C:\MyCppProjects\xpdf-4.03\xpdf\Lib.h(33,18): message : consulte a definição anterior de 'getNumPages'
+C:\MyCppProjects\xpdf-4.03\xpdf\Lib.cc(344,39): warning C4273: 'freeTextOutput': vínculo de dll inconsistente
+C:\MyCppProjects\xpdf-4.03\xpdf\Lib.h(34,19): message : consulte a definição anterior de 'freeTextOutput'
+  Gerando Código...
+C:\MyCppProjects\xpdf-4.03\xpdf\Lib.cc(369): warning C4717: 'testLoop': recursivo em todos os caminhos de controle, função causará estouro na pilha em tempo de execução
+LINK : warning LNK4044: opção não reconhecida '/pthread'; ignorada
+     Criando biblioteca C:/MyCppProjects/xpdf-4.03/build/xpdf/Debug/pdftotext.lib e objeto C:/MyCppProjects/xpdf-4.03/build/xpdf/Debug/pdftotext.exp
+  pdftotext.vcxproj -> C:\MyCppProjects\xpdf-4.03\build\xpdf\Debug\pdftotext.dll

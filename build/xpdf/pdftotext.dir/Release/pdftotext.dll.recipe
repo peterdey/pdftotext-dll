@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\MyCppProjects\xpdf-4.03\build\x64\release\ZERO_CHECK</FullPath>
+      <FullPath>C:\MyCppProjects\xpdf-4.03\build\x64\Release\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\MyCppProjects\xpdf-4.03\build\xpdf\Release\pdftotext.dll</FullPath>

@@ -1,0 +1,15 @@
+﻿cl : linha de comando warning D9002: ignorando opção desconhecida '-fPIC'
+cl : linha de comando warning D9002: ignorando opção desconhecida '-fvisibility=hidden'
+  FixedPoint.cc
+  GHash.cc
+  GList.cc
+  GString.cc
+  gfile.cc
+  gmem.cc
+  gmempp.cc
+  Trace.cc
+  Gerando Código...
+cl : linha de comando warning D9002: ignorando opção desconhecida '-fPIC'
+cl : linha de comando warning D9002: ignorando opção desconhecida '-fvisibility=hidden'
+  parseargs.c
+  goo_objs.vcxproj -> C:\MyCppProjects\xpdf-4.03\build\goo\goo_objs.dir\Release\goo_objs.lib

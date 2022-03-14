@@ -78,7 +78,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;C:\MyCppProjects\xpdf-4.03\ZLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fPIC -fvisibility=hidden</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -96,10 +97,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;C:\MyCppProjects\xpdf-4.03\ZLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;C:\MyCppProjects\xpdf-4.03\ZLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -112,7 +113,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;C:\MyCppProjects\xpdf-4.03\ZLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fPIC -fvisibility=hidden</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4290;4996</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -130,10 +132,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;C:\MyCppProjects\xpdf-4.03\ZLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;C:\MyCppProjects\xpdf-4.03\ZLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -146,7 +148,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;C:\MyCppProjects\xpdf-4.03\ZLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fPIC -fvisibility=hidden</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4290;4996</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -164,10 +167,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;C:\MyCppProjects\xpdf-4.03\ZLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;C:\MyCppProjects\xpdf-4.03\ZLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -180,7 +183,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;C:\MyCppProjects\xpdf-4.03\ZLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fPIC -fvisibility=hidden</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4290;4996</DisableSpecificWarnings>
@@ -197,10 +201,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;C:\MyCppProjects\xpdf-4.03\ZLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\MyCppProjects\xpdf-4.03;C:\MyCppProjects\xpdf-4.03\build;C:\MyCppProjects\xpdf-4.03\goo;C:\MyCppProjects\xpdf-4.03\fofi;C:\MyCppProjects\xpdf-4.03\splash;C:\MyCppProjects\xpdf-4.03\LibPng\include;C:\MyCppProjects\xpdf-4.03\ZLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>

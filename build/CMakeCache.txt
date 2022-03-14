@@ -238,10 +238,10 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 FONTCONFIG_LIBRARY:FILEPATH=FONTCONFIG_LIBRARY-NOTFOUND
 
 //Path to a file.
-FREETYPE_INCLUDE_DIR_freetype2:PATH=FREETYPE_INCLUDE_DIR_freetype2-NOTFOUND
+FREETYPE_INCLUDE_DIR_freetype2:PATH=C:/src/vcpkg/installed/x64-windows/include
 
 //Path to a file.
-FREETYPE_INCLUDE_DIR_ft2build:PATH=FREETYPE_INCLUDE_DIR_ft2build-NOTFOUND
+FREETYPE_INCLUDE_DIR_ft2build:PATH=C:/src/vcpkg/installed/x64-windows/include
 
 //Value Computed by CMake
 FreeType_BINARY_DIR:STATIC=C:/MyCppProjects/xpdf-4.03/build/FreeType
@@ -498,9 +498,9 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Freetype
-FIND_PACKAGE_MESSAGE_DETAILS_Freetype:INTERNAL=[C:/MyCppProjects/xpdf-4.03/FreeType][C:/MyCppProjects/xpdf-4.03/FreeType/include][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_Freetype:INTERNAL=[C:/MyCppProjects/xpdf-4.03/FreeType][C:/src/vcpkg/installed/x64-windows/include][v2.11.0()]
 //Details about finding PNG
-FIND_PACKAGE_MESSAGE_DETAILS_PNG:INTERNAL=[C:/MyCppProjects/xpdf-4.03/LibPng][C:/MyCppProjects/xpdf-4.03/LibPng/include][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_PNG:INTERNAL=[C:/MyCppProjects/xpdf-4.03/LibPng][C:/MyCppProjects/xpdf-4.03/LibPng/include][v1.6.32()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding ZLIB
