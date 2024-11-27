@@ -1,1 +1,0 @@
-C:\MyCppProjects\xpdf-4.03\build\FreeType\FreeType_OBJLIB.dir\Release\FreeType_OBJLIB.lib

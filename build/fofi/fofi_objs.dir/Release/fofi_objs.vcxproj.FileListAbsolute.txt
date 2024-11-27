@@ -1,1 +1,0 @@
-C:\MyCppProjects\xpdf-4.03\build\fofi\fofi_objs.dir\Release\fofi_objs.lib
