@@ -1,0 +1,6 @@
+LIBRARY pdftotext
+VERSION 4.03
+
+EXPORTS
+extractText
+getNumPages

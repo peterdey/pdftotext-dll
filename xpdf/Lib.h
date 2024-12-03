@@ -1,38 +1,12 @@
 #pragma once
 
-// Define EXPORTED for any platform
-#if defined _WIN32 || defined __CYGWIN__
-  #ifdef WIN_EXPORT
-    // Exporting...
-    #ifdef __GNUC__
-      #define EXPORTED __attribute__ ((dllexport))
-    #else
-      #define EXPORTED __declspec(dllexport) // Note: actually gcc seems to also supports this syntax.
-    #endif
-  #else
-    #ifdef __GNUC__
-      #define EXPORTED __attribute__ ((dllimport))
-    #else
-      #define EXPORTED __declspec(dllimport) // Note: actually gcc seems to also supports this syntax.
-    #endif
-  #endif
-  #define NOT_EXPORTED
-#else
-  #if __GNUC__ >= 4
-    #define EXPORTED __attribute__ ((visibility ("default")))
-    #define NOT_EXPORTED  __attribute__ ((visibility ("hidden")))
-  #else
-    #define EXPORTED
-    #define NOT_EXPORTED
-  #endif
-#endif
+#include <comdef.h>
 
 extern "C"
+
 {   
-    EXPORTED int extractText(char* fileName, int firstPage, int lastPage, const char* textOutEnc, const char* layout, char** textOutput, void (*logCallback)(const char*), const char* ownerPassword, const char* userPassword);
-    EXPORTED int getNumPages(char* fileName, void (*logCallback)(const char*), const char* ownerPassword, const char* userPassword);
-    EXPORTED void freeTextOutput(char* textOutput);
+    int __stdcall extractText(char* fileName, BSTR *textOutput, int firstPage, int lastPage, const char* textOutEncoding, const char* layout, void ( __stdcall *logCallback) (const BSTR), const char* ownerPassword, const char* userPassword);
+    int __stdcall getNumPages(char* fileName, void ( __stdcall *logCallback) (const BSTR), const char* ownerPassword, const char* userPassword);
 }
 //int extractText(char* fileName, int firstPage, int lastPage, const char* textOutEnc, const char* layout, char** textOutput, void (*logCallback)(const char*), const char* ownerPassword, const char* userPassword);
 //int getNumPages(char* fileName, void (*logCallback)(const char*), const char* ownerPassword, const char* userPassword);
-

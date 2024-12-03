@@ -10,6 +10,7 @@
 
 cmake_minimum_required(VERSION 3.4.8)
 
+set(CMAKE_GENERATOR_PLATFORM WIN32 CACHE INTERNAL "Force 32-bit compilation")
 
 project(xpdf)
 

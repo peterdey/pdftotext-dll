@@ -154,6 +154,7 @@ add_library(pdftotext SHARED
   #pdftotext.cc
   Lib.h
   Lib.cc
+  Lib.def
 )
 target_link_libraries(pdftotext goo fofi
                       ${PAPER_LIBRARY}

@@ -7,10 +7,10 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <string.h>
-#ifdef DEBUG_FP_LINUX
-#  include <fenv.h>
-#  include <fpu_control.h>
-#endif
+
+#include <windows.h>
+#include <comdef.h>
+
 #include "gmem.h"
 #include "gmempp.h"
 #include "parseargs.h"
@@ -78,21 +78,18 @@ static GBool printHelp = gFalse;
 
 //void (*textOutputFunc)(void* stream, const char* text, int len)
 
-int extractText(char* fileName, int firstPage, int lastPage, const char* textOutEnc, const char* layout, char** textOutput, void (*logCallback)(const char*), const char* ownerPassword, const char* userPassword) {
+int __stdcall extractText(char* fileName, BSTR *textOutput, int firstPage, int lastPage, const char* textOutEncoding, const char* layout, void ( __stdcall *logCallback) (const BSTR), const char* ownerPassword, const char* userPassword) {
 	PDFDoc* doc;
 	GString* ownerPW, * userPW;
 	TextOutputControl *textOutControl;
 	TextOutputDev* textOut;
 	UnicodeMap* uMap;
 
-
 	// read config file
 	globalParams = new GlobalParams(cfgFileName);
-	if (textOutEnc) {
-		globalParams->setTextEncoding(textOutEnc);
-	}
-	else
-	{
+	if (textOutEncoding) {
+		globalParams->setTextEncoding(textOutEncoding);
+	} else {
 		globalParams->setTextEncoding(textEncName);
 	}
 
@@ -108,7 +105,7 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 	if (!(uMap = globalParams->getTextEncoding())) {
 		error(errConfig, -1, "Couldn't get text encoding (extractText)");
 		if (logCallback != NULL) {
-			logCallback("Couldn't get text encoding (extractText)");
+			logCallback(SysAllocString(L"Couldn't get text encoding (extractText)"));
 		}
 		delete globalParams;
 		return 99;
@@ -117,14 +114,12 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 	// open PDF file
 	if (ownerPassword != NULL) {
 		ownerPW = new GString(ownerPassword);
-	}
-	else {
+	} else {
 		ownerPW = NULL;
 	}
 	if (userPassword != NULL) {
 		userPW = new GString(userPassword);
-	}
-	else {
+	} else {
 		userPW = NULL;
 	}
 
@@ -138,7 +133,7 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 
 	if (!doc->isOk()) {
 		if (logCallback != NULL) {
-			logCallback("doc is not Ok (extractText)");
+			logCallback(SysAllocString(L"doc is not Ok (extractText)"));
 		}
 		delete doc;
 		uMap->decRefCnt();
@@ -150,7 +145,7 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 		error(errNotAllowed, -1,
 			"Copying of text from this document is not allowed (extractText).");
 		if (logCallback != NULL) {
-			logCallback("Copying of text from this document is not allowed (extractText).");
+			logCallback(SysAllocString(L"Copying of text from this document is not allowed (extractText)."));
 		}
 		delete doc;
 		uMap->decRefCnt();
@@ -224,7 +219,7 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 	}
 	else {
 		if (logCallback != NULL) {
-			logCallback("text Out is not Ok (extractText)");
+			logCallback(SysAllocString(L"text Out is not Ok (extractText)"));
 		}
 		delete textOut;
 		return 2;
@@ -234,7 +229,7 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 	delete textOut;
 	delete textOutControl;
 	delete doc;
-		
+
 	//copy stringstream data to textOutput
 	std::string str = stream->str();
 	char* cstr = new char[str.length() + 1];
@@ -242,12 +237,12 @@ int extractText(char* fileName, int firstPage, int lastPage, const char* textOut
 	delete stream;	
 	str = "";	
 
-	*textOutput = cstr;	
+	*textOutput = SysAllocStringByteLen(cstr, strlen(cstr));
 
 	return 0;
 }
 
-int getNumPages(char* fileName, void (*logCallback)(const char*), const char* ownerPassword, const char* userPassword) {
+int __stdcall getNumPages(char* fileName, void ( __stdcall *logCallback) (const BSTR), const char* ownerPassword, const char* userPassword) {
 	PDFDoc* doc;
 	GString* ownerPW, * userPW;
 	
@@ -283,7 +278,7 @@ int getNumPages(char* fileName, void (*logCallback)(const char*), const char* ow
 	if (!(uMap = globalParams->getTextEncoding())) {
 		error(errConfig, -1, "Couldn't get text encoding (getNumPages)");
 		if (logCallback != NULL) {
-			logCallback("Couldn't get text encoding (getNumPages)");
+			logCallback(SysAllocString(L"Couldn't get text encoding (getNumPages)"));
 		}
 		delete globalParams;
 		return 99;
@@ -313,7 +308,7 @@ int getNumPages(char* fileName, void (*logCallback)(const char*), const char* ow
 
 	if (!doc->isOk()) {
 		if (logCallback != NULL) {
-			logCallback("doc is not Ok (getNumPages)");
+			logCallback(SysAllocString(L"doc is not Ok (getNumPages)"));
 		}
 		delete doc;
 		uMap->decRefCnt();
@@ -325,7 +320,7 @@ int getNumPages(char* fileName, void (*logCallback)(const char*), const char* ow
 		error(errNotAllowed, -1,
 			"Copying of text from this document is not allowed (getNumPages).");
 		if (logCallback != NULL) {
-			logCallback("Copying of text from this document is not allowed (getNumPages).");
+			logCallback(SysAllocString(L"Copying of text from this document is not allowed (getNumPages)."));
 		}
 		delete doc;
 		uMap->decRefCnt();
@@ -340,32 +335,3 @@ int getNumPages(char* fileName, void (*logCallback)(const char*), const char* ow
 
 	return pages;
 }
-
-
-void freeTextOutput(char* textOutput) {
-	delete[] textOutput;
-}
-
-
-//check for memory leaks
-/*void testLoop() {
-	char* fileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/downloads/3883f913-9d81-49f4-ae16-da448091c18c.pdf";
-	// char* outFileName = "C:/MyDartProjects/riodasostras/pdf_text_extraction/out.txt";
-	char* textOutput = NULL;
-	int re = extractText(fileName, 1, 1, "UTF-8", NULL, &textOutput, NULL, NULL, NULL);
-	printf("result %s \r\n", textOutput);
-	//delete[] textOutput;
-	freeTextOutput(textOutput);	
-	//int numPages = getNumPages(fileName, [](const char* v) {
-	//	printf("log: %s \r\n", v);
-	//	}, NULL, NULL);
-	//printf("getNumPages %d \r\n", numPages);
-
-	std::this_thread::sleep_for(2000ms);
-	testLoop();
-}
-
-int main(int argc, char* argv[]) {
-	printf("inicio \r\n");
-	testLoop();
-}*/
