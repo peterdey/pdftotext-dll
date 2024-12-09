@@ -1,15 +1,15 @@
-# pdftotext.dll for VB6
+#  PDF to text extractor DLL for VB6 
 
 A fork of pdftotext from [Xpdf](http://www.xpdfreader.com/ "Xpdf"), modified and compiled as a DLL to allow for text extraction of PDF in VB6.
 
 # Usage
 ```vb
 Private Declare Function getNumPages Lib "pdftotext.dll" (ByVal lpFileName As String, Optional ByVal lpLogCallbackFunc As Long, Optional ByVal lpOwnerPassword As String, Optional ByVal lpUserPassword As String) As Integer
-Private Declare Function extractText Lib "pdftotext.dll" (ByVal lpFileName As String, ByRef lpTextOutput As String, Optional ByVal iFirstPage As Integer, Optional ByVal iLastPage As Integer, Optional ByVal lpTextOutEnc As String, Optional ByVal lpLayout As String, Optional ByVal lpLogCallbackFunc As Long, Optional ByVal lpOwnerPassword As String, Optional ByVal lpUserPassword As String) As Integer
+Private Declare Function extractText Lib "pdftotext.dll" (ByVal lpFileName As String, ByRef lpTextOutput As Long, Optional ByVal iFirstPage As Integer, Optional ByVal iLastPage As Integer, Optional ByVal lpTextOutEnc As String, Optional ByVal lpLayout As String, Optional ByVal lpLogCallbackFunc As Long, Optional ByVal lpOwnerPassword As String, Optional ByVal lpUserPassword As String) As Integer
 
 Dim strOutput as String
 pages = getNumPages("filename.pdf", AddressOf LogCallback, "pass", "anotherpass")
-ret = extractText("filename.pdf", strOutput, 1, 3, "UTF-8", "rawOrder", AddressOf LogCallback, "pass", "anotherpass")
+ret = extractText("filename.pdf", VarPtr(strOutput), 1, 3, "UTF-8", "rawOrder", AddressOf LogCallback, "pass", "anotherpass")
 
 Public Sub LogCallback(ByVal str As String)
 	Debug.Print "Log: " & str
@@ -22,6 +22,25 @@ Dim strOutput as String
 pages = getNumPages("filename.pdf")
 ret = extractText("filename.pdf", strOutput)
 ```
+
+## Acceptable values for lpTExtOutEnc
+* UTF-8 (default)
+* Latin1
+* ASCII7
+* Symbol
+* ZapfDingbats
+* UCS-2
+
+## Acceptable values for lpLayout
+| lpLayout | Description |
+| ------------ | ------------ |
+| NULL (default) | format into reading order |
+| rawOrder | keep strings in content stream order |
+| table | similar to PhysLayout, but optimized for tables |
+| phys | maintain original physical layout |
+| simple | simple one-column physical layout |
+| simple2 | simple one-column physical layout (alternative) |
+| linePrinter | strict fixed-pitch/height layout |
 
 # Building
 ```console
@@ -37,9 +56,8 @@ Output is in `build/xpdf/Release/pdftotext.dll`
 
 ## Requirements:
 
-Visual Studio 2019
-cmake version 3.21.3
-
+* Visual Studio 2019
+* cmake version 3.21.3
 
 # License & Distribution
 
@@ -75,6 +93,5 @@ Cog web site:
 
 Xpdf uses the following libraries:
 * FreeType [http://www.freetype.org/]
-* libpng [http://www.libpng.com/pub/png/libpng.html] (used by pdftohtml
-  and pdftopng)
+* libpng [http://www.libpng.com/pub/png/libpng.html] (used by pdftohtml and pdftopng)
 * zlib [http://zlib.net/] (used by pdftohtml)

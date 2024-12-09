@@ -78,7 +78,7 @@ static GBool printHelp = gFalse;
 
 //void (*textOutputFunc)(void* stream, const char* text, int len)
 
-int __stdcall extractText(char* fileName, BSTR *textOutput, int firstPage, int lastPage, const char* textOutEncoding, const char* layout, void ( __stdcall *logCallback) (const BSTR), const char* ownerPassword, const char* userPassword) {
+int __stdcall extractText(char* fileName, BSTR *lpTextOutput, int firstPage, int lastPage, const char* textOutEncoding, const char* layout, void ( __stdcall *logCallback) (const BSTR), const char* ownerPassword, const char* userPassword) {
 	PDFDoc* doc;
 	GString* ownerPW, * userPW;
 	TextOutputControl *textOutControl;
@@ -234,10 +234,32 @@ int __stdcall extractText(char* fileName, BSTR *textOutput, int firstPage, int l
 	std::string str = stream->str();
 	char* cstr = new char[str.length() + 1];
 	strcpy(cstr, str.c_str());
-	delete stream;	
-	str = "";	
+	delete stream;
+	str = "";
 
-	*textOutput = SysAllocStringByteLen(cstr, strlen(cstr));
+	// Check if the input BSTR pointer is valid
+    if (lpTextOutput == nullptr) {
+        return -1; // Null pointer supplied
+    }
+    // If the BSTR was previously allocated, free it before allocating new memory
+    if (*lpTextOutput != nullptr) {
+        SysFreeString(*lpTextOutput);  // Free the previously allocated BSTR
+    }
+
+    // Determine how long the UTF16 string will be
+    int len = MultiByteToWideChar(CP_UTF8, 0, cstr, -1, nullptr, 0);
+    if (len == 0) {
+        return -2; // Conversion failure
+    }
+
+    // Allocate a new BSTR to assign the converted wide string
+    *lpTextOutput = SysAllocStringLen(nullptr, len - 1);  // Allocate space for the string, excluding the null terminator
+    if (*lpTextOutput == nullptr) {
+        return -3; // Error code for memory allocation failure
+    }
+
+    // Convert the UTF-8 string to the UTF16 BSTR (wide string)
+    MultiByteToWideChar(CP_UTF8, 0, cstr, -1, *lpTextOutput, len);
 
 	return 0;
 }
