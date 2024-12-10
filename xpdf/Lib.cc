@@ -65,20 +65,26 @@ static GBool listEncodings = gFalse;
 static GBool printVersion = gFalse;
 static GBool printHelp = gFalse;
 
-//static std::stringstream* stream = new std::stringstream(std::stringstream::out | std::stringstream::in );
-
-//void (*TextOutputFunc)(void* stream, const char* text, int len)
-
-/*void textOutputFun(void* str, const char* text, int len) {
-	//printf("%s", text);
-	std::stringstream* st = (std::stringstream*)str;
-	st->write("123456",6);
-	printf("textOutputFun \r\n");
-}*/
-
-//void (*textOutputFunc)(void* stream, const char* text, int len)
-
 int __stdcall extractText(char* fileName, BSTR *lpTextOutput, int firstPage, int lastPage, const char* textOutEncoding, const char* layout, void ( __stdcall *logCallback) (const BSTR), const char* ownerPassword, const char* userPassword) {
+	SELECTION sel;
+	sel.firstPage = firstPage;
+	sel.lastPage = lastPage;
+
+	return _extractText(fileName, lpTextOutput, sel, textOutEncoding, layout, logCallback, ownerPassword, userPassword);
+}
+
+int __stdcall extractTextSlice(char* fileName, BSTR *lpTextOutput, int page, int sliceX, int sliceY, int sliceW, int sliceH, const char* textOutEncoding, const char* layout, void ( __stdcall *logCallback) (const BSTR), const char* ownerPassword, const char* userPassword) {
+	SELECTION sel;
+	sel.firstPage = page;
+	sel.sliceX = sliceX;
+	sel.sliceY = sliceY;
+	sel.sliceW = sliceW;
+	sel.sliceH = sliceH;
+
+	return _extractText(fileName, lpTextOutput, sel, textOutEncoding, layout, logCallback, ownerPassword, userPassword);
+}
+
+int __stdcall _extractText(char* fileName, BSTR *lpTextOutput, SELECTION sel, const char* textOutEncoding, const char* layout, void ( __stdcall *logCallback) (const BSTR), const char* ownerPassword, const char* userPassword) {
 	PDFDoc* doc;
 	GString* ownerPW, * userPW;
 	TextOutputControl *textOutControl;
@@ -156,11 +162,11 @@ int __stdcall extractText(char* fileName, BSTR *lpTextOutput, int firstPage, int
 	//textFileName = new GString(outFileName); 
 
 	// get page range
-	if (firstPage < 1) {
-		firstPage = 1;
+	if (sel.firstPage < 1) {
+		sel.firstPage = 1;
 	}
-	if (lastPage < 1 || lastPage > doc->getNumPages()) {
-		lastPage = doc->getNumPages();
+	if (sel.lastPage < 1 || sel.lastPage > doc->getNumPages()) {
+		sel.lastPage = doc->getNumPages();
 	}
 
 	// write text file
@@ -214,8 +220,11 @@ int __stdcall extractText(char* fileName, BSTR *lpTextOutput, int firstPage, int
 		}, stream, textOutControl);
 
 	if (textOut->isOk()) {
-		doc->displayPages(textOut, firstPage, lastPage, 72, 72, 0,
-			gFalse, gTrue, gFalse);
+		if (sel.sliceX >= 0) {
+			doc->displayPageSlice(textOut, sel.firstPage, 72, 72, 0, gFalse, gTrue, gFalse, sel.sliceX, sel.sliceY, sel.sliceW, sel.sliceH);
+		} else {
+			doc->displayPages(textOut, sel.firstPage, sel.lastPage, 72, 72, 0, gFalse, gTrue, gFalse);
+		}
 	}
 	else {
 		if (logCallback != NULL) {
