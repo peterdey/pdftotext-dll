@@ -20,10 +20,10 @@ Almost all arguments are optional.  For example, the following works:
 ```vb
 Dim strOutput as String
 pages = getNumPages("filename.pdf")
-ret = extractText("filename.pdf", strOutput)
+ret = extractText("filename.pdf", VarPtr(strOutput))
 ```
 
-## Acceptable values for lpTExtOutEnc
+## Acceptable values for lpTextOutEnc
 * UTF-8 (default)
 * Latin1
 * ASCII7
