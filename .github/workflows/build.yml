@@ -2,7 +2,6 @@ name: Build project
 
 on:
   push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
   release:
@@ -37,7 +36,7 @@ jobs:
     - name: Upload build artefacts
       uses: actions/upload-artifact@v4
       with:
-        name: upload-artefacts
+        name: pdftotext
         path: |
           build/xpdf/Release/pdftotext.dll
 
