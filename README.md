@@ -23,7 +23,7 @@ Almost all arguments are optional.  For example, the following works:
 Dim strOutput as String
 pages = getNumPages("filename.pdf")
 ret = extractText("filename.pdf", VarPtr(strOutput))
-ret = extractTextSlice("filename.pdf", VarPtr(strOutput), 1, 207, 100, 300, 200) ' However, you probably want to use the "table" layout
+ret = extractTextSlice("filename.pdf", VarPtr(strOutput), 1, 207, 100, 300, 200) 'However, you probably want to use the "table" layout
 ```
 
 ## Acceptable values for lpTextOutEnc
