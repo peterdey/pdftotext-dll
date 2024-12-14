@@ -279,21 +279,6 @@ int __stdcall getNumPages(char* fileName, void ( __stdcall *logCallback) (const 
 	
 	UnicodeMap* uMap;
 
-#ifdef DEBUG_FP_LINUX
-	// enable exceptions on floating point div-by-zero
-	feenableexcept(FE_DIVBYZERO);
-	// force 64-bit rounding: this avoids changes in output when minor
-	// code changes result in spills of x87 registers; it also avoids
-	// differences in output with valgrind's 64-bit floating point
-	// emulation (yes, this is a kludge; but it's pretty much
-	// unavoidable given the x87 instruction set; see gcc bug 323 for
-	// more info)
-	fpu_control_t cw;
-	_FPU_GETCW(cw);
-	cw = (fpu_control_t)((cw & ~_FPU_EXTENDED) | _FPU_DOUBLE);
-	_FPU_SETCW(cw);
-#endif
-
 	// read config file
 	globalParams = new GlobalParams(cfgFileName);	
 	globalParams->setTextEncoding(textEncName);
@@ -365,4 +350,85 @@ int __stdcall getNumPages(char* fileName, void ( __stdcall *logCallback) (const 
 	delete doc;
 
 	return pages;
+}
+
+int __stdcall getPageSize(char* fileName, int page, double *width, double *height, void ( __stdcall *logCallback) (const BSTR), const char* ownerPassword, const char* userPassword) {
+	PDFDoc* doc;
+	GString* ownerPW, * userPW;
+	
+	UnicodeMap* uMap;
+
+	// read config file
+	globalParams = new GlobalParams(cfgFileName);	
+	globalParams->setTextEncoding(textEncName);
+	//globalParams->setTextEOL(textEOL))  
+	if (noPageBreaks) {
+		globalParams->setTextPageBreaks(gFalse);
+	}
+	if (quiet) {
+		globalParams->setErrQuiet(quiet);
+	}
+
+	// get mapping to output encoding
+	if (!(uMap = globalParams->getTextEncoding())) {
+		error(errConfig, -1, "Couldn't get text encoding (getNumPages)");
+		if (logCallback != NULL) {
+			logCallback(SysAllocString(L"Couldn't get text encoding (getNumPages)"));
+		}
+		delete globalParams;
+		return 99;
+	}
+
+	// open PDF file
+	if (ownerPassword != NULL) {
+		ownerPW = new GString(ownerPassword);
+	}
+	else {
+		ownerPW = NULL;
+	}
+	if (userPassword != NULL) {
+		userPW = new GString(userPassword);
+	}
+	else {
+		userPW = NULL;
+	}
+
+	doc = new PDFDoc(fileName, ownerPW, userPW);
+	if (userPW) {
+		delete userPW;
+	}
+	if (ownerPW) {
+		delete ownerPW;
+	}
+
+	if (!doc->isOk()) {
+		if (logCallback != NULL) {
+			logCallback(SysAllocString(L"doc is not Ok (getNumPages)"));
+		}
+		delete doc;
+		uMap->decRefCnt();
+		return -1;
+	}
+
+	// check for copy permission
+	if (!doc->okToCopy()) {
+		error(errNotAllowed, -1,
+			"Copying of text from this document is not allowed (getNumPages).");
+		if (logCallback != NULL) {
+			logCallback(SysAllocString(L"Copying of text from this document is not allowed (getNumPages)."));
+		}
+		delete doc;
+		uMap->decRefCnt();
+		return -1;
+	}
+		
+	// get page dimensions
+	*width = doc->getPageMediaWidth(page);	
+	*height = doc->getPageMediaHeight(page);	
+
+	//free
+	delete globalParams;	
+	delete doc;
+
+	return 0;
 }

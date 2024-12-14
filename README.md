@@ -5,13 +5,17 @@ A fork of pdftotext from [Xpdf](http://www.xpdfreader.com/ "Xpdf"), modified and
 # Usage
 ```vb
 Private Declare Function getNumPages Lib "pdftotext.dll" (ByVal lpFileName As String, Optional ByVal lpLogCallbackFunc As Long, Optional ByVal lpOwnerPassword As String, Optional ByVal lpUserPassword As String) As Integer
-Private Declare Function extractText Lib "pdftotext.dll" (ByVal lpFileName As String, ByRef lpTextOutput As Long, Optional ByVal iFirstPage As Integer, Optional ByVal iLastPage As Integer, Optional ByVal lpTextOutEnc As String, Optional ByVal lpLayout As String, Optional ByVal lpLogCallbackFunc As Long, Optional ByVal lpOwnerPassword As String, Optional ByVal lpUserPassword As String) As Integer
+Private Declare Function extractText Lib "pdftotext.dll" (ByVal lpFileName As String, ByVal lpTextOutput As Long, Optional ByVal iFirstPage As Integer, Optional ByVal iLastPage As Integer, Optional ByVal lpTextOutEnc As String, Optional ByVal lpLayout As String, Optional ByVal lpLogCallbackFunc As Long, Optional ByVal lpOwnerPassword As String, Optional ByVal lpUserPassword As String) As Integer
 Private Declare Function extractTextSlice Lib "pdftotext.dll" (ByVal lpFileName As String, ByVal lpTextOutput As Long, ByVal iPage As Integer, ByVal iSliceX As Integer, ByVal iSliceY As Integer, ByVal iSliceW As Integer, ByVal iSliceH As Integer, Optional ByVal lpTextOutEnc As String, Optional ByVal lpLayout As String, Optional ByVal lpLogCallbackFunc As Long, Optional ByVal lpOwnerPassword As String, Optional ByVal lpUserPassword As String) As Integer
+Private Declare Function getPageSize Lib "pdftotext.dll" (ByVal lpFileName As String, ByVal iPage as Integer, ByRef dWidth as Double, ByRef dHeight as Double, Optional ByVal lpLogCallbackFunc As Long, Optional ByVal lpOwnerPassword As String, Optional ByVal lpUserPassword As String) As Integer
 
 Dim strOutput as String
+Dim Width as Double, Height as Double
+
 pages = getNumPages("filename.pdf", AddressOf LogCallback, "pass", "anotherpass")
 ret = extractText("filename.pdf", VarPtr(strOutput), 1, 3, "UTF-8", "rawOrder", AddressOf LogCallback, "pass", "anotherpass")
 ret = extractTextSlice("filename.pdf", VarPtr(strOutput), 1, 207, 100, 300, 200, "UTF-8", "table", AddressOf LogCallback, "pass", "anotherpass")
+ret = getPageSize("filename.pdf", 1, Width, Height, AddressOf LogCallback, "pass", "anotherpass")
 
 Public Sub LogCallback(ByVal str As String)
 	Debug.Print "Log: " & str
@@ -21,9 +25,12 @@ End Sub
 Almost all arguments are optional.  For example, the following works:
 ```vb
 Dim strOutput as String
+Dim Width as Double, Height as Double
+
 pages = getNumPages("filename.pdf")
 ret = extractText("filename.pdf", VarPtr(strOutput))
 ret = extractTextSlice("filename.pdf", VarPtr(strOutput), 1, 207, 100, 300, 200) 'However, you probably want to use the "table" layout
+ret = getPageSize("filename.pdf", 1, Width, Height)
 ```
 
 ## Acceptable values for lpTextOutEnc
