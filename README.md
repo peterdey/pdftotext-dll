@@ -5,7 +5,7 @@ A fork of pdftotext from [Xpdf](http://www.xpdfreader.com/ "Xpdf"), modified and
 # Usage
 ```vb
 Private Declare Function getNumPages Lib "pdftotext.dll" (ByVal lpFileName As String, Optional ByVal lpLogCallbackFunc As Long, Optional ByVal lpOwnerPassword As String, Optional ByVal lpUserPassword As String) As Integer
-Private Declare Function extractText Lib "pdftotext.dll" (ByVal lpFileName As String, ByRef lpTextOutput As Long, Optional ByVal iFirstPage As Integer, Optional ByVal iLastPage As Integer, Optional ByVal lpTextOutEnc As String, Optional ByVal lpLayout As String, Optional ByVal lpLogCallbackFunc As Long, Optional ByVal lpOwnerPassword As String, Optional ByVal lpUserPassword As String) As Integer
+Private Declare Function extractText Lib "pdftotext.dll" (ByVal lpFileName As String, ByVal lpTextOutput As Long, Optional ByVal iFirstPage As Integer, Optional ByVal iLastPage As Integer, Optional ByVal lpTextOutEnc As String, Optional ByVal lpLayout As String, Optional ByVal lpLogCallbackFunc As Long, Optional ByVal lpOwnerPassword As String, Optional ByVal lpUserPassword As String) As Integer
 
 Dim strOutput as String
 pages = getNumPages("filename.pdf", AddressOf LogCallback, "pass", "anotherpass")
