@@ -1,0 +1,38 @@
+ ////////////////////////////////////////////////////////////////////////////
+//
+// DLL Version Information
+//
+
+#include <WinVer.h>
+
+VS_VERSION_INFO     VERSIONINFO
+FILEVERSION         4,0,3,2
+PRODUCTVERSION      4,0,3,2
+FILEFLAGSMASK       VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+FILEFLAGS           VS_FF_DEBUG
+#else
+FILEFLAGS           0x0L
+#endif
+FILEOS              VOS_NT_WINDOWS32
+FILETYPE            VFT_DLL
+FILESUBTYPE         VFT2_UNKNOWN
+BEGIN
+BLOCK "StringFileInfo"
+BEGIN
+    BLOCK "040904B0"
+    BEGIN
+        VALUE "ProductName", "PDF Text Extractor for VB6/VBA"
+        VALUE "ProductVersion",  "4.03-2"
+        VALUE "FileDescription", "https://github.com/peterdey/pdftotext-dll"
+        VALUE "FileVersion",     "4.03-2"
+        VALUE "InternalName",    "pdftotext.dll"
+        VALUE "LegalCopyright", "Copyright (c) 2024 Peter Dey"
+        VALUE "OriginalFilename","pdftotext.dll"
+    END
+END
+BLOCK "VarFileInfo"
+BEGIN
+    VALUE "Translation", 0x0409, 1200
+END
+END
