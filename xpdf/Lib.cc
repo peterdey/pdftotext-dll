@@ -65,20 +65,26 @@ static GBool listEncodings = gFalse;
 static GBool printVersion = gFalse;
 static GBool printHelp = gFalse;
 
-//static std::stringstream* stream = new std::stringstream(std::stringstream::out | std::stringstream::in );
-
-//void (*TextOutputFunc)(void* stream, const char* text, int len)
-
-/*void textOutputFun(void* str, const char* text, int len) {
-	//printf("%s", text);
-	std::stringstream* st = (std::stringstream*)str;
-	st->write("123456",6);
-	printf("textOutputFun \r\n");
-}*/
-
-//void (*textOutputFunc)(void* stream, const char* text, int len)
-
 int __stdcall extractText(char* fileName, BSTR *lpTextOutput, int firstPage, int lastPage, const char* textOutEncoding, const char* layout, void ( __stdcall *logCallback) (const BSTR), const char* ownerPassword, const char* userPassword) {
+	SELECTION sel;
+	sel.firstPage = firstPage;
+	sel.lastPage = lastPage;
+
+	return _extractText(fileName, lpTextOutput, sel, textOutEncoding, layout, logCallback, ownerPassword, userPassword);
+}
+
+int __stdcall extractTextSlice(char* fileName, BSTR *lpTextOutput, int page, int sliceX, int sliceY, int sliceW, int sliceH, const char* textOutEncoding, const char* layout, void ( __stdcall *logCallback) (const BSTR), const char* ownerPassword, const char* userPassword) {
+	SELECTION sel;
+	sel.firstPage = page;
+	sel.sliceX = sliceX;
+	sel.sliceY = sliceY;
+	sel.sliceW = sliceW;
+	sel.sliceH = sliceH;
+
+	return _extractText(fileName, lpTextOutput, sel, textOutEncoding, layout, logCallback, ownerPassword, userPassword);
+}
+
+int __stdcall _extractText(char* fileName, BSTR *lpTextOutput, SELECTION sel, const char* textOutEncoding, const char* layout, void ( __stdcall *logCallback) (const BSTR), const char* ownerPassword, const char* userPassword) {
 	PDFDoc* doc;
 	GString* ownerPW, * userPW;
 	TextOutputControl *textOutControl;
@@ -156,11 +162,11 @@ int __stdcall extractText(char* fileName, BSTR *lpTextOutput, int firstPage, int
 	//textFileName = new GString(outFileName); 
 
 	// get page range
-	if (firstPage < 1) {
-		firstPage = 1;
+	if (sel.firstPage < 1) {
+		sel.firstPage = 1;
 	}
-	if (lastPage < 1 || lastPage > doc->getNumPages()) {
-		lastPage = doc->getNumPages();
+	if (sel.lastPage < 1 || sel.lastPage > doc->getNumPages()) {
+		sel.lastPage = doc->getNumPages();
 	}
 
 	// write text file
@@ -214,8 +220,11 @@ int __stdcall extractText(char* fileName, BSTR *lpTextOutput, int firstPage, int
 		}, stream, textOutControl);
 
 	if (textOut->isOk()) {
-		doc->displayPages(textOut, firstPage, lastPage, 72, 72, 0,
-			gFalse, gTrue, gFalse);
+		if (sel.sliceX >= 0) {
+			doc->displayPageSlice(textOut, sel.firstPage, 72, 72, 0, gFalse, gTrue, gFalse, sel.sliceX, sel.sliceY, sel.sliceW, sel.sliceH);
+		} else {
+			doc->displayPages(textOut, sel.firstPage, sel.lastPage, 72, 72, 0, gFalse, gTrue, gFalse);
+		}
 	}
 	else {
 		if (logCallback != NULL) {
@@ -269,21 +278,6 @@ int __stdcall getNumPages(char* fileName, void ( __stdcall *logCallback) (const 
 	GString* ownerPW, * userPW;
 	
 	UnicodeMap* uMap;
-
-#ifdef DEBUG_FP_LINUX
-	// enable exceptions on floating point div-by-zero
-	feenableexcept(FE_DIVBYZERO);
-	// force 64-bit rounding: this avoids changes in output when minor
-	// code changes result in spills of x87 registers; it also avoids
-	// differences in output with valgrind's 64-bit floating point
-	// emulation (yes, this is a kludge; but it's pretty much
-	// unavoidable given the x87 instruction set; see gcc bug 323 for
-	// more info)
-	fpu_control_t cw;
-	_FPU_GETCW(cw);
-	cw = (fpu_control_t)((cw & ~_FPU_EXTENDED) | _FPU_DOUBLE);
-	_FPU_SETCW(cw);
-#endif
 
 	// read config file
 	globalParams = new GlobalParams(cfgFileName);	
@@ -356,4 +350,85 @@ int __stdcall getNumPages(char* fileName, void ( __stdcall *logCallback) (const 
 	delete doc;
 
 	return pages;
+}
+
+int __stdcall getPageSize(char* fileName, int page, double *width, double *height, void ( __stdcall *logCallback) (const BSTR), const char* ownerPassword, const char* userPassword) {
+	PDFDoc* doc;
+	GString* ownerPW, * userPW;
+	
+	UnicodeMap* uMap;
+
+	// read config file
+	globalParams = new GlobalParams(cfgFileName);	
+	globalParams->setTextEncoding(textEncName);
+	//globalParams->setTextEOL(textEOL))  
+	if (noPageBreaks) {
+		globalParams->setTextPageBreaks(gFalse);
+	}
+	if (quiet) {
+		globalParams->setErrQuiet(quiet);
+	}
+
+	// get mapping to output encoding
+	if (!(uMap = globalParams->getTextEncoding())) {
+		error(errConfig, -1, "Couldn't get text encoding (getNumPages)");
+		if (logCallback != NULL) {
+			logCallback(SysAllocString(L"Couldn't get text encoding (getNumPages)"));
+		}
+		delete globalParams;
+		return 99;
+	}
+
+	// open PDF file
+	if (ownerPassword != NULL) {
+		ownerPW = new GString(ownerPassword);
+	}
+	else {
+		ownerPW = NULL;
+	}
+	if (userPassword != NULL) {
+		userPW = new GString(userPassword);
+	}
+	else {
+		userPW = NULL;
+	}
+
+	doc = new PDFDoc(fileName, ownerPW, userPW);
+	if (userPW) {
+		delete userPW;
+	}
+	if (ownerPW) {
+		delete ownerPW;
+	}
+
+	if (!doc->isOk()) {
+		if (logCallback != NULL) {
+			logCallback(SysAllocString(L"doc is not Ok (getNumPages)"));
+		}
+		delete doc;
+		uMap->decRefCnt();
+		return -1;
+	}
+
+	// check for copy permission
+	if (!doc->okToCopy()) {
+		error(errNotAllowed, -1,
+			"Copying of text from this document is not allowed (getNumPages).");
+		if (logCallback != NULL) {
+			logCallback(SysAllocString(L"Copying of text from this document is not allowed (getNumPages)."));
+		}
+		delete doc;
+		uMap->decRefCnt();
+		return -1;
+	}
+		
+	// get page dimensions
+	*width = doc->getPageMediaWidth(page);	
+	*height = doc->getPageMediaHeight(page);	
+
+	//free
+	delete globalParams;	
+	delete doc;
+
+	return 0;
 }

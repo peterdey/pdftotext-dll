@@ -3,4 +3,6 @@ VERSION 4.03
 
 EXPORTS
 extractText
+extractTextSlice
 getNumPages
+getPageSize
