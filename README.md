@@ -11,6 +11,7 @@ Dim strOutput as String
 pages = getNumPages("filename.pdf", AddressOf LogCallback, "pass", "anotherpass")
 ret = extractText("filename.pdf", VarPtr(strOutput), 1, 3, "UTF-8", "rawOrder", AddressOf LogCallback, "pass", "anotherpass")
 
+' Must be in a standard module (not Form or Class)
 Public Sub LogCallback(ByVal str As String)
 	Debug.Print "Log: " & str
 End Sub
